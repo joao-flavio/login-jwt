@@ -14,7 +14,7 @@ export default function authMiddleware(req: Request, res: Response, next: NextFu
   const token = authorization.replace('Bearer', '').trim();
 
   try {
-    const data = jwt.verify(token, 'fctyejdos9hsjosijghkwj488i');
+    const data = jwt.verify(token, process.env.JWT_TOKEN);
     const { id } = data as TokenPayload;
 
     req.userId = id;
