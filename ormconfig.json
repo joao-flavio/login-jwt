@@ -1,0 +1,17 @@
+{
+  "type": "postgres",
+  "host": "",
+  "port": 5432,
+  "username": "postgres",
+  "password": "",
+  "database": "meubanco",
+  "entities": [
+     "src/app/models/*.ts"
+  ],
+  "migrations": [
+     "src/database/migrations/*.ts"
+  ],
+  "cli": {
+    "migrationsDir": "src/database/migrations"
+  }
+}
